@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b63bvqopu6skp"]
+
+[ext_resource type="Texture2D" uid="uid://cr3lcw4tnneqp" path="res://blokus board.png" id="1"]
+[ext_resource type="PackedScene" uid="uid://dk4t6gpid06a1" path="res://Slot.tscn" id="2"]
+[ext_resource type="Script" path="res://blokus_board.gd" id="4"]
+
+[node name="BlokusBoard" type="Sprite2D"]
+position = Vector2(502, 502)
+texture = ExtResource("1")
+script = ExtResource("4")
+slot_scene = ExtResource("2")
+
+[node name="Slot" parent="." instance=ExtResource("2")]
+visible = false
+position = Vector2(26, -15)
+
+[connection signal="mouse_in_slot" from="Slot" to="." method="_on_slot_mouse_in_slot"]

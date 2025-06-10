@@ -1,0 +1,1459 @@
+[gd_scene load_steps=5 format=3 uid="uid://cddfh01xvxe51"]
+
+[ext_resource type="PackedScene" uid="uid://b63bvqopu6skp" path="res://blokus_board.tscn" id="1_rwrln"]
+[ext_resource type="Script" path="res://blokus.gd" id="1_vympx"]
+[ext_resource type="PackedScene" uid="uid://bkd7662if0eie" path="res://Piece.tscn" id="7_k4dc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5x5a"]
+size = Vector2(960, 960)
+
+[node name="Blokus" type="Node2D"]
+script = ExtResource("1_vympx")
+
+[node name="BlokusBoard" parent="." instance=ExtResource("1_rwrln")]
+
+[node name="BoardArea" type="Area2D" parent="BlokusBoard"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlokusBoard/BoardArea"]
+shape = SubResource("RectangleShape2D_n5x5a")
+
+[node name="Piece1" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 850)
+num_piece = 1
+
+[node name="Piece2" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 652)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 1,
+"Tile5y": 0
+}
+num_piece = 2
+
+[node name="Piece3" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1002, 800)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 3,
+"Tile5y": 1
+}
+num_piece = 3
+
+[node name="Piece4" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1004, 750)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 0,
+"Tile5x": 3,
+"Tile5y": 0
+}
+num_piece = 4
+
+[node name="Piece5" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 948)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 4,
+"Tile5y": 0
+}
+num_piece = 5
+
+[node name="Piece6" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1002, 602)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 1
+}
+num_piece = 6
+
+[node name="Piece7" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 504)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 7
+
+[node name="Piece8" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 454)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 8
+
+[node name="Piece9" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1006, 356)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 9
+
+[node name="Piece10" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1004, 258)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -1
+}
+num_piece = 10
+
+[node name="Piece11" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1002, 208)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 11
+
+[node name="Piece12" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1000, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 12
+
+[node name="Piece13" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 850)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 13
+piece_size = 4
+
+[node name="Piece14" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1252, 800)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 14
+piece_size = 4
+
+[node name="Piece15" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 948)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 15
+piece_size = 4
+
+[node name="Piece16" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 750)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": 0,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 16
+piece_size = 4
+
+[node name="Piece17" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 652)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 17
+piece_size = 3
+
+[node name="Piece18" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 602)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 18
+piece_size = 3
+
+[node name="Piece19" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 504)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 19
+piece_size = 2
+
+[node name="Piece20" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1250, 454)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 20
+piece_size = 1
+
+[node name="ConfirmPlacementButton" type="Button" parent="."]
+offset_left = 1144.0
+offset_top = 19.0
+offset_right = 1284.0
+offset_bottom = 115.0
+text = "CONFIRM PLACEMENT"
+
+[node name="Piece21" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+num_piece = 21
+player_affiliation = 2
+
+[node name="Piece22" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 1,
+"Tile5y": 0
+}
+num_piece = 22
+player_affiliation = 2
+
+[node name="Piece23" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 3,
+"Tile5y": 1
+}
+num_piece = 23
+player_affiliation = 2
+
+[node name="Piece24" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 0,
+"Tile5x": 3,
+"Tile5y": 0
+}
+num_piece = 24
+player_affiliation = 2
+
+[node name="Piece25" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 4,
+"Tile5y": 0
+}
+num_piece = 25
+player_affiliation = 2
+
+[node name="Piece26" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 1
+}
+num_piece = 26
+player_affiliation = 2
+
+[node name="Piece27" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 27
+player_affiliation = 2
+
+[node name="Piece28" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 28
+player_affiliation = 2
+
+[node name="Piece29" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 29
+player_affiliation = 2
+
+[node name="Piece30" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -1
+}
+num_piece = 30
+player_affiliation = 2
+
+[node name="Piece31" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 31
+player_affiliation = 2
+
+[node name="Piece32" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 32
+player_affiliation = 2
+
+[node name="Piece33" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 33
+piece_size = 4
+player_affiliation = 2
+
+[node name="Piece34" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 34
+piece_size = 4
+player_affiliation = 2
+
+[node name="Piece35" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 35
+piece_size = 4
+player_affiliation = 2
+
+[node name="Piece36" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": 0,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 36
+piece_size = 4
+player_affiliation = 2
+
+[node name="Piece37" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 37
+piece_size = 3
+player_affiliation = 2
+
+[node name="Piece38" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 38
+piece_size = 3
+player_affiliation = 2
+
+[node name="Piece39" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 39
+piece_size = 2
+player_affiliation = 2
+
+[node name="Piece40" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1450, 278)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 40
+piece_size = 1
+player_affiliation = 2
+
+[node name="Piece41" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+num_piece = 41
+player_affiliation = 3
+
+[node name="Piece42" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 1,
+"Tile5y": 0
+}
+num_piece = 42
+player_affiliation = 3
+
+[node name="Piece43" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 3,
+"Tile5y": 1
+}
+num_piece = 43
+player_affiliation = 3
+
+[node name="Piece44" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 0,
+"Tile5x": 3,
+"Tile5y": 0
+}
+num_piece = 44
+player_affiliation = 3
+
+[node name="Piece45" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 4,
+"Tile5y": 0
+}
+num_piece = 45
+player_affiliation = 3
+
+[node name="Piece46" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 1
+}
+num_piece = 46
+player_affiliation = 3
+
+[node name="Piece47" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 47
+player_affiliation = 3
+
+[node name="Piece48" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 48
+player_affiliation = 3
+
+[node name="Piece49" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 49
+player_affiliation = 3
+
+[node name="Piece50" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -1
+}
+num_piece = 50
+player_affiliation = 3
+
+[node name="Piece51" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 51
+player_affiliation = 3
+
+[node name="Piece52" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 52
+player_affiliation = 3
+
+[node name="Piece53" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 53
+piece_size = 4
+player_affiliation = 3
+
+[node name="Piece54" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 54
+piece_size = 4
+player_affiliation = 3
+
+[node name="Piece55" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 55
+piece_size = 4
+player_affiliation = 3
+
+[node name="Piece56" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": 0,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 56
+piece_size = 4
+player_affiliation = 3
+
+[node name="Piece57" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 57
+piece_size = 3
+player_affiliation = 3
+
+[node name="Piece58" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 58
+piece_size = 3
+player_affiliation = 3
+
+[node name="Piece59" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 59
+piece_size = 2
+player_affiliation = 3
+
+[node name="Piece60" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 60
+piece_size = 1
+player_affiliation = 3
+
+[node name="Piece61" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+num_piece = 61
+player_affiliation = 4
+
+[node name="Piece62" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 1,
+"Tile5y": 0
+}
+num_piece = 62
+player_affiliation = 4
+
+[node name="Piece63" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 3,
+"Tile5y": 1
+}
+num_piece = 63
+player_affiliation = 4
+
+[node name="Piece64" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 0,
+"Tile5x": 3,
+"Tile5y": 0
+}
+num_piece = 64
+player_affiliation = 4
+
+[node name="Piece65" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 4,
+"Tile5y": 0
+}
+num_piece = 65
+player_affiliation = 4
+
+[node name="Piece66" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 1
+}
+num_piece = 66
+player_affiliation = 4
+
+[node name="Piece67" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 67
+player_affiliation = 4
+
+[node name="Piece68" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": 0
+}
+num_piece = 68
+player_affiliation = 4
+
+[node name="Piece69" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 69
+player_affiliation = 4
+
+[node name="Piece70" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -1
+}
+num_piece = 70
+player_affiliation = 4
+
+[node name="Piece71" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 71
+player_affiliation = 4
+
+[node name="Piece72" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": -1,
+"Tile4x": 2,
+"Tile4y": -1,
+"Tile5x": 2,
+"Tile5y": -2
+}
+num_piece = 72
+player_affiliation = 4
+
+[node name="Piece73" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 73
+piece_size = 4
+player_affiliation = 4
+
+[node name="Piece74" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 1,
+"Tile3y": 1,
+"Tile4x": 2,
+"Tile4y": 1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 74
+piece_size = 4
+player_affiliation = 4
+
+[node name="Piece75" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 3,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 75
+piece_size = 4
+player_affiliation = 4
+
+[node name="Piece76" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": -1,
+"Tile3x": 1,
+"Tile3y": 0,
+"Tile4x": 1,
+"Tile4y": -1,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 76
+piece_size = 4
+player_affiliation = 4
+
+[node name="Piece77" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 2,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 77
+piece_size = 3
+player_affiliation = 4
+
+[node name="Piece78" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 78
+piece_size = 3
+player_affiliation = 4
+
+[node name="Piece79" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 1,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 79
+piece_size = 2
+player_affiliation = 4
+
+[node name="Piece80" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 280)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 0,
+"Tile3x": 0,
+"Tile3y": 0,
+"Tile4x": 0,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 80
+piece_size = 1
+player_affiliation = 4
+
+[node name="Piece81" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1350, 750)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 1,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 81
+piece_size = 4
+
+[node name="Piece82" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1451, 277)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 1,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 82
+piece_size = 4
+player_affiliation = 2
+
+[node name="Piece83" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1684, 110)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 1,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 83
+piece_size = 4
+player_affiliation = 3
+
+[node name="Piece84" parent="." instance=ExtResource("7_k4dc4")]
+position = Vector2(1685, 279)
+layout = {
+"Tile1x": 0,
+"Tile1y": 0,
+"Tile2x": 0,
+"Tile2y": 1,
+"Tile3x": 0,
+"Tile3y": -1,
+"Tile4x": 1,
+"Tile4y": 0,
+"Tile5x": 0,
+"Tile5y": 0
+}
+num_piece = 84
+piece_size = 4
+player_affiliation = 4
+
+[node name="EndGameButton" type="Button" parent="."]
+offset_left = 1403.0
+offset_top = 16.0
+offset_right = 1571.0
+offset_bottom = 114.0
+text = "I have no more plays"
+
+[node name="Game Explination" type="RichTextLabel" parent="."]
+offset_left = 1612.0
+offset_top = 692.0
+offset_right = 1885.0
+offset_bottom = 986.0
+text = "How to play:
+Click on sand pieces to select them and click on board to place.  They will slot into place if it's a valid placement, turn red if not.
+With a piece selected, right click to rotate and middle click to flip.
+Once you've slotted a piece, click CONFIRM PLACEMENT to end your turn.
+Click \"I have no more plays\" to end the game
+"
+
+[node name="GameEndScores" type="RichTextLabel" parent="."]
+offset_left = 1553.0
+offset_top = 418.0
+offset_right = 1908.0
+offset_bottom = 632.0
+
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 1835.0
+offset_top = 22.0
+offset_right = 1900.0
+offset_bottom = 88.0
+text = "RESET"
+
+[connection signal="next_turn" from="." to="." method="_on_next_turn"]
+[connection signal="mouse_entered" from="BlokusBoard/BoardArea" to="." method="_on_board_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlokusBoard/BoardArea" to="." method="_on_board_area_mouse_exited"]
+[connection signal="pressed" from="ConfirmPlacementButton" to="." method="_on_confirm_placement_button_pressed"]
+[connection signal="pressed" from="EndGameButton" to="." method="_on_end_game_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

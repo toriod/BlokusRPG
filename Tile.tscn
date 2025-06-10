@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://fm0aaaa6sv8p"]
+
+[ext_resource type="Script" path="res://Tile.gd" id="1_dlieu"]
+[ext_resource type="Texture2D" uid="uid://5sk3utt5sdaa" path="res://sand tile 1.png" id="2_6qr8q"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(48, 48)
+
+[node name="Tile" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_dlieu")
+
+[node name="Sand" type="Sprite2D" parent="."]
+position = Vector2(24, 24)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("2_6qr8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 24)
+shape = SubResource("1")
+
+[connection signal="dragsignal" from="." to="." method="_on_dragsignal"]
+[connection signal="input_event" from="." to="." method="_on_Piece_input_event"]

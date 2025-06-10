@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Blokus RPG"
+config/description="A demo showcasing drag and drop functionality.
+
+- Drag and drop the color buttons to copy their colors over.
+- Click on the buttons to manually adjust their color."
+run/main_scene="res://blokus.tscn"
+config/features=PackedStringArray("4.3")
+config/icon="res://sand.png"
+
+[autoload]
+
+Global="*res://global.gd"
+
+[display]
+
+window/size/viewport_width=2000
+window/size/viewport_height=1000
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[gdnative]
+
+singletons=[]
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
